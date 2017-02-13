@@ -1,0 +1,12 @@
+include "global.tbh"
+
+'====================================================================
+sub on_sys_init()
+	if tbt35_init(YES)<>OK then
+		sys.debugprint("SSI channel could not be allocated, using bit banging instead."+CR_LF)
+	end if
+end sub
+
+sub on_sys_timer()
+	sys.debugprint(ftostr(tbt35_get_kpa(),FTOSTR_MODE_AUTO,5)+" kPa"+CR_LF)
+end sub

@@ -1,0 +1,17 @@
+#define TBT35_DEBUG_PRINT 1
+
+#IF PLATFORM_ID=TPP2WG2 OR PLATFORM_ID=TPP3WG2
+	#define PLATFORM_TYPE_32 1
+#endif
+
+#ifndef TBT35_CLK_PIN
+	#define TBT35_CLK_PIN PL_IO_NULL
+#endif
+
+#ifndef TBT35_DATA_PIN
+	#define TBT35_DATA_PIN PL_IO_NULL
+#endif
+
+declare function tbt35_init(use_ssi as no_yes) as ok_ng
+declare function tbt35_get() as word
+declare function tbt35_get_kpa()as float

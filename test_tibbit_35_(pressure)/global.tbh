@@ -1,0 +1,16 @@
+'DEFINES-------------------------------------------------------------
+const CR_LF=chr(10)+chr(13)
+
+#IF PLATFORM_ID=TPP2WG2 OR PLATFORM_ID=TPP3WG2 OR PLATFORM_ID=TPP2W OR PLATFORM_ID=TPP3W
+	#define TBT35_CLK_PIN PL_IO_NUM_9_TX0
+	#define TBT35_DATA_PIN PL_IO_NUM_8_RX0
+#ELSE
+	XXXX 'Unsupported platform
+#ENDIF
+
+'INCLUDES------------------------------------------------------------
+include "super_i2c.tbh"
+include "ssi.tbh"
+include "tbt35.tbh"
+
+'DECLARATIONS--------------------------------------------------------
