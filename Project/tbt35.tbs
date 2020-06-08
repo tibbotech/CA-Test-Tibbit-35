@@ -49,7 +49,7 @@ function tbt35_init(use_ssi as no_yes) as ok_ng
 	if i2c_num_tbt35<4 then
 		ssi.channel=i2c_num_tbt35
 		ssi.enabled=NO
-		ssi.baudrate=1
+		ssi.baudrate=PL_SSI_BAUDRATES_400kHz
 		ssi.clkmap=TBT35_CLK_PIN
 		ssi.dimap=TBT35_DATA_PIN
 		ssi.domap=TBT35_DATA_PIN
